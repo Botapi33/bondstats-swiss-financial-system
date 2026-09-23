@@ -1,3 +1,3 @@
-# BondStats Swiss Financial System — Compact Pages
+# BondStats Swiss Financial System — Content V2
 
-Static GitHub Pages build. Upload this folder contents to repository root. No Actions, Astro, npm or Jekyll required. 100 concepts are stored in data.js and rendered by index.html.
+Static GitHub Pages build. 100 concepts, revised topic-specific copy and clearer article hierarchy. No Astro, npm, Jekyll or Actions required.
