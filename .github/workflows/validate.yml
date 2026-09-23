@@ -32,4 +32,15 @@ jobs:
         run: npm run build
 
       - name: Verify build output
-        run: npm run verify-build
+        run: |
+          test -d dist
+          COUNT=$(find dist -name "index.html" | wc -l)
+          echo "Generated HTML pages: $COUNT"
+
+          if [ "$COUNT" -ne 101 ]; then
+            echo "ERROR: Expected exactly 101 HTML pages, but found $COUNT."
+            exit 1
+          fi
+
+          echo "Swiss Financial System build verified successfully."
+          echo "100 detail pages + 1 hub = 101 HTML pages."
