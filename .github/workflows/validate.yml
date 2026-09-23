@@ -27,14 +27,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Setup GitHub Pages
-        id: pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Validate Swiss dataset
         run: npm run validate
@@ -50,11 +48,12 @@ jobs:
           echo "Generated HTML pages: $COUNT"
 
           if [ "$COUNT" -ne 101 ]; then
-            echo "ERROR: Expected 101 HTML pages, found $COUNT."
+            echo "ERROR: Expected exactly 101 HTML pages, but found $COUNT."
             exit 1
           fi
 
-          echo "Swiss build verified: 100 detail pages + 1 hub."
+          echo "Swiss Financial System verified successfully."
+          echo "100 detail pages + 1 hub = 101 HTML pages."
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
