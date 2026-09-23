@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://botapi33.github.io/bondstats-swiss-financial-system/sitemap.xml
