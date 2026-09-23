@@ -1,2 +1,7 @@
 import { defineConfig } from 'astro/config';
-export default defineConfig({ output: 'static', site: 'https://www.bondstats.org' });
+
+export default defineConfig({
+  site: 'https://botapi33.github.io',
+  base: '/bondstats-swiss-financial-system',
+  output: 'static',
+});
